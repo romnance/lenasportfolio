@@ -118,9 +118,7 @@ export const Menu = styled.div`
 export const Button = styled.button`
     @media (max-width: 768px){
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     position: relative;
     z-index: 10;
@@ -137,7 +135,6 @@ export const Button = styled.button`
     display: none;
     cursor: pointer;
     border-radius: 0px;
-    box-sizing: border-box;
 `
 
 export const HamBox = styled.div`
@@ -145,28 +142,51 @@ export const HamBox = styled.div`
     position: relative;
     width: var(--hamburger-width);
     height: 24px;
+    box-sizing: inherit;
 `
 export const HamBoxInner = styled.div`
     position: absolute;
+    display: block;
     top: 50%;
     right: 0px;
     width: var(--hamburger-width);
     height: 2px;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--primary-black);
     transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
     transform: rotate(0deg);
-    &:before {
+    &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 0px;
     width: 120%;
+    height: 2px;
     top: -10px;
     opacity: 1;
     transition: var(--ham-before);
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--primary-black);
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;s
     }
-    &:after {
-    width: 80%;
+    &::after {
     content: "";
+    width: 80%;
+    left: auto;
+    height: 2px;
+    right: 0px;
     bottom: -10px;
+    display: block;
+    position: absolute;
     transform: rotate(0deg);
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    background-color: var(--primary-black);
     transition: var(--ham-after);
     }
 `

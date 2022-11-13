@@ -4,6 +4,10 @@ const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Red Hat Display', sans-serif;
   }
+  *:before,
+  *:after {
+  box-sizing: inherit;
+  }
   @keyframes Spin {
     from {
       transform: rotate(0deg);
