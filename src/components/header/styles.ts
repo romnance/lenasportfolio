@@ -11,9 +11,7 @@ interface Open {
 
 export const Header = styled.header`
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
     box-sizing: border-box;
     position: fixed;
@@ -38,9 +36,7 @@ export const Header = styled.header`
 
 export const Nav = styled.nav`
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -51,9 +47,7 @@ export const Nav = styled.nav`
 
 export const Logo = styled.div`
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
 `
 export const Link = styled.a`
@@ -97,7 +91,6 @@ export const Li = styled.li<ILi>`
     counter-increment: item 1;
     font-size: var(--fz-xxl);
     display: list-item;
-    text-align: -webkit-match-parent;
 `
 export const A = styled.a`
     display: inline-block;
@@ -192,9 +185,7 @@ export const Sidebar = styled.aside<Open>`
     display: block;
     @media (max-width: 768px){
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     position: fixed;
     top: 0px;
