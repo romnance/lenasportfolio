@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-interface INav {
-  open: boolean;
-}
-
 interface ILi {
   transition: string;
+}
+
+interface Open {
+  visible: string;
 }
 
 
@@ -144,7 +144,7 @@ export const HamBox = styled.div`
     height: 24px;
     box-sizing: inherit;
 `
-export const HamBoxInner = styled.div`
+export const HamBoxInner = styled.div<Open>`
     position: absolute;
     display: block;
     top: 50%;
@@ -153,19 +153,19 @@ export const HamBoxInner = styled.div`
     height: 2px;
     border-radius: var(--border-radius);
     background-color: var(--primary-black);
-    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
-    transform: rotate(0deg);
+    transition: ${(props) => props.visible === "visible" ? "transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s" : "transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s"};
+    transform: ${(props) => props.visible === "visible" ? "rotate(225deg)" : "rotate(0deg)"};
     &::before {
     content: "";
     display: block;
     position: absolute;
     left: auto;
     right: 0px;
-    width: 120%;
+    width: ${(props) => props.visible === "visible" ? "100%" : "120%"};
     height: 2px;
     top: -10px;
-    opacity: 1;
-    transition: var(--ham-before);
+    opacity: ${(props) => props.visible === "visible" ? "0" : "1"};
+    transition: ${(props) => props.visible === "visible" ? "var(--ham-before-active)" : "var(--ham-before)"};
     height: 2px;
     border-radius: 4px;
     background-color: var(--primary-black);
@@ -175,18 +175,81 @@ export const HamBoxInner = styled.div`
     }
     &::after {
     content: "";
-    width: 80%;
+    width: ${(props) => props.visible === "visible" ? "100%" : "80%"};
     left: auto;
     height: 2px;
     right: 0px;
-    bottom: -10px;
+    bottom: ${(props) => props.visible === "visible" ? "0px" : "-10px"};
     display: block;
     position: absolute;
-    transform: rotate(0deg);
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-    transition-property: transform;
+    transition: ${(props) => props.visible === "visible" ? "var(--ham-after-active)" : "var(--ham-after)"};
+    transform:  ${(props) => props.visible === "visible" ? "rotate(-90deg)" : "rotate(0deg)"};
     background-color: var(--primary-black);
-    transition: var(--ham-after);
     }
 `
+
+export const Sidebar = styled.aside<Open>`
+    display: block;
+    @media (max-width: 768px){
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0px;
+    background-color: rgba(188, 184, 240, 0.70);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    z-index: 9;
+    transform: ${(props) => props.visible === "visible" ? "translateX(0vw)" : "translateX(100vw)"};
+    visibility: ${(props) => props.visible}; 
+    transition: var(--transition);
+    }
+`
+
+export const AsideNav = styled.nav<Open>`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    color: var(--primary-black);
+    font-family: var(--font-mono);
+    visibility: ${(props) => props.visible}; 
+    text-align: center;
+`
+export const AsideOl = styled.ol`
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 100%;
+`
+
+export const AsideLi = styled.li`
+    @media (max-width: 600px) {
+    margin: 0px auto 10px;
+    }
+    position: relative;
+    margin: 0px auto 20px;
+    counter-increment: item 1;
+    font-size: clamp(var(--fz-sm),6vw,var(--fz-lg));
+    }
+`
+
+export const AsideA = styled.a`
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: var(--transition);
+    width: 100%;
+    padding: 3px 20px 20px;
+  `

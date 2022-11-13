@@ -1,11 +1,16 @@
-import * as React from 'react';
-
-import {Header,Nav, Logo, Link, Links, Ol, Li, A, Menu, Button, HamBox, HamBoxInner} from './styles';
+import React, {useState} from "react";
+import {Header,Nav, Logo, Link, Links, Ol, Li, A, Menu, Button, HamBox, HamBoxInner, Sidebar, AsideNav, AsideOl, AsideLi, AsideA} from './styles';
 
 export interface IHeaderProps {
 }
 
 export default function HeaderComponent (_props: IHeaderProps) {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
+  const menuOpener = () => {
+    setOpenMenu(!openMenu);
+  }
+
   return (
     <Header>
       <Nav>
@@ -19,11 +24,20 @@ export default function HeaderComponent (_props: IHeaderProps) {
         </Links>
         <Menu>
           <div>
-            <Button>
-            <HamBox>
-            <HamBoxInner></HamBoxInner>
-            </HamBox>
+            <Button onClick={menuOpener}>
+              <HamBox>
+                  <HamBoxInner visible={openMenu ? "visible" : "hidden"}></HamBoxInner>
+              </HamBox>
             </Button>
+            <Sidebar visible={openMenu ? "visible" : "hidden"}>
+            <AsideNav visible={openMenu ? "visible" : "hidden"}>
+              <AsideOl>
+                  <AsideLi><AsideA href='#'>What I Do</AsideA></AsideLi>
+                  <AsideLi><AsideA href='#'>Projects</AsideA></AsideLi>
+                  <AsideLi><AsideA href='#'>Get in touch</AsideA></AsideLi>
+              </AsideOl>
+            </AsideNav>
+            </Sidebar>
           </div>
         </Menu>
       </Nav>

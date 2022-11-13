@@ -18,11 +18,13 @@ const GlobalStyles = createGlobalStyle`
   }
   :root {
     --primary-black: #1B1B1B;
+    --light-grey: #F6F6F6;
+    --light-purple: #EAD6EE;
     --dark-navy: #020c1b;
     --navy: #0a192f;
     --light-navy: #112240;
     --lightest-navy: #233554;
-    --navy-shadow: rgba(2,12,27,0.7);
+    --navy-shadow: rgba(2,12,27,0.2);
     --dark-slate: #495670;
     --slate: #8892b0;
     --light-slate: #a8b2d1;
