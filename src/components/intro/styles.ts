@@ -15,7 +15,7 @@ export const IntroDiv = styled.div<Hide>`
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--white);
+    background-color: #FFFFFF;
     display: ${(props) => props.hide ? "none" : "block"};
     opacity: ${(props) => props.hide ? "0" : "1"};
     transition: display 5s ease-out 3.5s,opacity 1s ease-in-out 0.25s;

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import useDocumentScrollThrottled from '../../helpers/documentScroll';
 import {Header,Nav, Logo, Link, Links, Ol, Li, A, Menu, Button, HamBox, HamBoxInner, Sidebar, AsideNav, AsideOl, AsideLi, AsideA} from './styles';
 
@@ -7,7 +7,7 @@ export interface IHeaderProps {
 
 export default function HeaderComponent (_props: IHeaderProps) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [hideHeader, setHideHeader] = useState(false);
+  const [hideHeader, setHideHeader] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
   const shadowStyle = showShadow ? '0 9px 9px -9px rgba(0, 0, 0, 0.13)' : '';
@@ -15,6 +15,10 @@ export default function HeaderComponent (_props: IHeaderProps) {
 
   const MINIMUM_SCROLL = 80;
   const TIMEOUT_DELAY = 400;
+
+  useEffect(() => {
+    setHideHeader(false)
+  },[])
 
   useDocumentScrollThrottled(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData;
