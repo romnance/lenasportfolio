@@ -1,4 +1,5 @@
 import {useState} from "react";
+import useDocumentScrollThrottled from '../../helpers/documentScroll';
 import {Header,Nav, Logo, Link, Links, Ol, Li, A, Menu, Button, HamBox, HamBoxInner, Sidebar, AsideNav, AsideOl, AsideLi, AsideA} from './styles';
 
 export interface IHeaderProps {
@@ -6,13 +7,33 @@ export interface IHeaderProps {
 
 export default function HeaderComponent (_props: IHeaderProps) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [hideHeader, setHideHeader] = useState(false);
+  const [showShadow, setShowShadow] = useState(false);
+
+  const shadowStyle = showShadow ? '0 9px 9px -9px rgba(0, 0, 0, 0.13)' : '';
+  const hiddenStyle = hideHeader ? 'translateY(-110%)' : 'translateY(0)';
+
+  const MINIMUM_SCROLL = 80;
+  const TIMEOUT_DELAY = 400;
+
+  useDocumentScrollThrottled(callbackData => {
+    const { previousScrollTop, currentScrollTop } = callbackData;
+    const isScrolledDown = previousScrollTop < currentScrollTop;
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+
+    setShowShadow(currentScrollTop > 2);
+
+    setTimeout(() => {
+      setHideHeader(isScrolledDown && isMinimumScrolled);
+    }, TIMEOUT_DELAY);
+  });
 
   const menuOpener = () => {
     setOpenMenu(!openMenu);
   }
 
   return (
-    <Header>
+    <Header shadowStyle={shadowStyle} hiddenStyle={hiddenStyle} >
       <Nav>
         <Logo><Link>Lena&nbsp;Klimova</Link></Logo>
         <Links>

@@ -8,8 +8,13 @@ interface Open {
   visible: string;
 }
 
+interface Scroll {
+      shadowStyle: string;
+      hiddenStyle: string;
+}
 
-export const Header = styled.header`
+
+export const Header = styled.header<Scroll>`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,10 +27,12 @@ export const Header = styled.header`
     height: var(--nav-height);
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
-    transition: var(--transition);
+    box-shadow: ${(props) => props.shadowStyle};
     filter: none !important;
     pointer-events: auto !important;
     user-select: auto !important;
+    transform: ${(props) => props.hiddenStyle};
+    transition: transform 0.3s ease;
    @media (max-width: 768px) {
     padding: 0px 25px;
   }
@@ -195,8 +202,7 @@ export const Sidebar = styled.aside<Open>`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0px;
-    background-color: rgba(188, 184, 240, 0.70);
-    backdrop-filter: blur(10px);
+    background-color: rgba(188, 184, 240, 0.95);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
     z-index: 9;
     transform: ${(props) => props.visible === "visible" ? "translateX(0vw)" : "translateX(100vw)"};
