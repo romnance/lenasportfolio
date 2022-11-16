@@ -10,14 +10,13 @@ function App() {
       setTimeout(() => {
         setShowIntro(!showIntro);
       }, 1500);
-  }, [])
+  }, []);
 
   return (
     <>
     {!showIntro && <HeaderComponent />}
     <Intro />
     <IntroSliders />
-    <h1>Hi!</h1>
     </>
   );
 }

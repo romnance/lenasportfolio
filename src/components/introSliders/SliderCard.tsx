@@ -1,18 +1,23 @@
 import React, { FC } from 'react'; 
-import {Section, Div, Emoji} from "./styles";
+import {Section, Div, Emoji, Img, Title} from "./styles";
 
 type SliderProps = {
   color: string,
-  paragraph: string,
+  paragraph1: string,
+  paragraph2?: string,
   imgLink: string
 }
 
-const SliderCard: FC<SliderProps> = ({ color, paragraph = "Hi, I'm Lena", imgLink }) => {
+
+const SliderCard: FC<SliderProps> = ({ color, paragraph1, paragraph2, imgLink }) => {
+    console.log(imgLink)
 return (
     <Section color={color}>
         <Div>
-            <Emoji imgLink={imgLink} />       
-             <p>{ paragraph }</p>
+            <Emoji><Img src={imgLink} /></Emoji>
+            <Div>
+                <Title>{ paragraph1 }<br />{ paragraph2 }</Title>
+            </Div>      
         </Div>
     </Section>
     )
