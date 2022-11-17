@@ -27,15 +27,24 @@ export const Section = styled.section<Color>`
     align-items: center;
     height: 70vh;
     width: 80%;
+    padding-top:8px;
     background-color: ${(props) => props.color};
     border-radius: 48px;
     margin: 24px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 1, 0.08);
+    transition: 0.2s linear 0.2s;
     &:nth-child(1) {
         top: 18%;
         z-index: 3;
         position: absolute;
         left: 9%;
         transform-origin: left 2px;
+        &:hover {
+            top: 16%;
+            left: 10%;
+            transition: 0.4s ease-out;
+            }
+        }
     }
     &:nth-child(2) {
         z-index: 2;
@@ -43,6 +52,10 @@ export const Section = styled.section<Color>`
         left: 10%;
         top: 3%;
         transform: rotate(358deg);
+        &:hover {
+            top: 2%;
+            transition: 0.4s ease-out;
+        }
     }
     &:nth-child(3) {
         z-index: 1;
@@ -50,6 +63,11 @@ export const Section = styled.section<Color>`
         position: absolute;
         left: 12%;
         transform: rotate(1deg)
+        &:hover {
+            top:19%;
+            transform: rotate(6deg)
+            transition: 0.4s ease-out;
+        }
     }
 `
 
@@ -87,7 +105,7 @@ export const Title = styled.h4`
     font-family: 'Red Hat Display';
     font-style: normal;
     font-weight: 600;
-    font-size: var(--fz-xxl);
-    line-height: var(--fz-heading);
+    font-size: var(--fz-heading);
+    line-height: calc(var(--fz-heading)*1.2);
     text-align: center;
 `

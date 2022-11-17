@@ -5,14 +5,14 @@ type SliderProps = {
   color: string,
   paragraph1: string,
   paragraph2?: string,
-  imgLink: string
+  imgLink: string,
+  cb: Function,
 }
 
 
-const SliderCard: FC<SliderProps> = ({ color, paragraph1, paragraph2, imgLink }) => {
-    console.log(imgLink)
+const SliderCard: FC<SliderProps> = ({ color, paragraph1, paragraph2, imgLink, cb }) => {
 return (
-    <Section color={color}>
+    <Section color={color} onClick={() => cb()}>
         <Div>
             <Emoji><Img src={imgLink} /></Emoji>
             <Div>

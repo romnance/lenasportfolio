@@ -1,4 +1,4 @@
-import React, { FC } from 'react'; 
+import React, { FC, useState } from 'react'; 
 import {Slider} from "./styles";
 import SliderCard from "./SliderCard";
 import First from "../../images/Group1.png";
@@ -10,11 +10,53 @@ type Props = {
 }
 
 const IntroSliders: FC<Props> = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const nextPage = () => {
+        if (currentPage < 3) {
+            setCurrentPage(currentPage + 1)
+        } else 
+        setCurrentPage(1)
+    }
+
+    const firstPage = () => {
+    if (currentPage === 1) {
+        return (    
+        <>   
+            <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />     
+            <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
+            <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+        </>)
+        }
+    }
+
+    const secondPage = () => {
+    if (currentPage === 2) {
+        return (    
+        <>       
+            <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
+            <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+            <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
+        </>)
+        }
+    }
+
+    const thirdPage = () => {
+    if (currentPage === 3) {
+        return (    
+        <>       
+            <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+            <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
+            <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
+        </>)
+        }
+    }
+
 return (
-    <Slider>        
-        <SliderCard imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
-        <SliderCard imgLink={Second} color="#D1EBCB" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
-        <SliderCard imgLink={Third} color="#BCB8F0" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
+    <Slider> 
+        {firstPage()}
+        {secondPage()}
+        {thirdPage()}
     </Slider>
     )
 }
