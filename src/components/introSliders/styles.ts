@@ -8,41 +8,58 @@ interface Link {
     imgLink: string;
 }
 
+//контейнер карточек
 export const Slider = styled.div`
-    position: absolute; 
-    margin-top: 100px;
-    display: flex;
+    padding-top: 100px;
     width: 90%;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
+    height: 750px;
+    box-sizing: border-box;
     transition: 0.4s ease-out;
     position: relative;
     left: calc(50% - 45%);
 `
 
+// карточки
 export const Section = styled.section<Color>`
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 60vh;
-    width: 80vw;
+    height: 70vh;
+    width: 80%;
     background-color: ${(props) => props.color};
     border-radius: 48px;
     margin: 24px 0;
-    left: 0px;
-    background: linear-gradient(105.07deg, #BCB8F0 0%, #EAE4EB 31.65%, #D4E2F3 58.7%, #F3D3AD 98.01%);
-    &:nth-child(1), &:nth-child(2)  {
-       margin-right: -50px;
+    &:nth-child(1) {
+        top: 18%;
+        z-index: 3;
+        position: absolute;
+        left: 9%;
+        transform-origin: left 2px;
+    }
+    &:nth-child(2) {
+        z-index: 2;
+        position: relative;
+        left: 10%;
+        top: 3%;
+        transform: rotate(358deg);
+    }
+    &:nth-child(3) {
+        z-index: 1;
+        top: 17%;
+        position: absolute;
+        left: 12%;
+        transform: rotate(1deg)
     }
 `
 
 export const Div = styled.div`
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    width: 1000px;
 `
 
 export const Emoji = styled.div`

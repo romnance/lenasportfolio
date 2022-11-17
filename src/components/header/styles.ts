@@ -202,7 +202,9 @@ export const Sidebar = styled.aside<Open>`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0px;
-    background-color: rgba(188, 184, 240, 0.95);
+    background-color: rgba(255, 255, 255, 0.99);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
     z-index: 9;
     transform: ${(props) => props.visible === "visible" ? "translateX(0vw)" : "translateX(100vw)"};
@@ -236,7 +238,7 @@ export const AsideLi = styled.li`
     position: relative;
     margin: 0px auto 20px;
     counter-increment: item 1;
-    font-size: clamp(var(--fz-sm),6vw,var(--fz-lg));
+    font-size: var(--fz-xl));
     }
 `
 
@@ -248,5 +250,5 @@ export const AsideA = styled.a`
     position: relative;
     transition: var(--transition);
     width: 100%;
-    padding: 3px 20px 20px;
+    padding: 3px 10px 10px;
   `

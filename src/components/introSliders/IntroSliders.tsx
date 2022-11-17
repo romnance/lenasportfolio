@@ -13,8 +13,8 @@ const IntroSliders: FC<Props> = () => {
 return (
     <Slider>        
         <SliderCard imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
-        <SliderCard imgLink={Second} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
-        <SliderCard imgLink={Third} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
+        <SliderCard imgLink={Second} color="#D1EBCB" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
+        <SliderCard imgLink={Third} color="#BCB8F0" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />
     </Slider>
     )
 }
