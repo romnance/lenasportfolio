@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0px;
     width: 100vw;
     overflow-y: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
     background-color: #FFFFFF;
   }
 `

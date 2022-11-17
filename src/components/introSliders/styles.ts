@@ -8,18 +8,17 @@ interface Link {
     imgLink: string;
 }
 
-//контейнер карточек
 export const Slider = styled.div`
     padding-top: 100px;
     width: 90%;
     height: 750px;
+    display: flex;
     box-sizing: border-box;
     transition: 0.4s ease-out;
     position: relative;
     left: calc(50% - 45%);
 `
 
-// карточки
 export const Section = styled.section<Color>`
     display: flex;
     flex-direction: row;
@@ -108,4 +107,36 @@ export const Title = styled.h4`
     font-size: var(--fz-heading);
     line-height: calc(var(--fz-heading)*1.2);
     text-align: center;
+`
+
+
+export const CurrentSliderContainer = styled.div`
+    top: 80%;
+    z-index: 5;
+    left: calc(48% - 45px);
+    position: absolute;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 16px;
+    opacity: 1;
+    transition: var(--transition);
+
+`
+
+export const CurrentSlider = styled.div`
+    width: 26px;
+    height: 16px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 13px;
+`
+
+export const InactiveSlider = styled.div`
+    width: 24px;
+    height: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 13px;
+    border: 1px solid #000000;
 `

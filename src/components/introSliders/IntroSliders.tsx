@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'; 
-import {Slider} from "./styles";
+import {Slider, CurrentSliderContainer, CurrentSlider, InactiveSlider} from "./styles";
 import SliderCard from "./SliderCard";
 import First from "../../images/Group1.png";
 import Second from "../../images/2.png";
@@ -26,6 +26,9 @@ const IntroSliders: FC<Props> = () => {
             <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />     
             <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
             <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+            <CurrentSliderContainer>
+            <CurrentSlider /><InactiveSlider /><InactiveSlider />
+            </CurrentSliderContainer>
         </>)
         }
     }
@@ -37,6 +40,9 @@ const IntroSliders: FC<Props> = () => {
             <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
             <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
             <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
+            <CurrentSliderContainer>
+            <InactiveSlider /><CurrentSlider /><InactiveSlider />
+            </CurrentSliderContainer>
         </>)
         }
     }
@@ -48,12 +54,15 @@ const IntroSliders: FC<Props> = () => {
             <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
             <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
             <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
+            <CurrentSliderContainer>
+            <InactiveSlider /><InactiveSlider /><CurrentSlider />
+            </CurrentSliderContainer>
         </>)
         }
     }
 
 return (
-    <Slider> 
+    <Slider>
         {firstPage()}
         {secondPage()}
         {thirdPage()}
