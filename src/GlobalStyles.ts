@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
     --fz-lg: 18px;
     --fz-xl: 20px;
     --fz-xxl: 22px;
-    --fz-heading: 32px;
+    --fz-heading: 3.2rem;
     --border-radius: 4px;
     --nav-height: 100px;
     --nav-scroll-height: 70px;
@@ -53,6 +53,12 @@ const GlobalStyles = createGlobalStyle`
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #FFFFFF;
+      @media (max-width: 768px) {
+     font-size: var(--fz-md);
+    }
+    @media (max-width: 1080px){
+    font-size: var(--fz-lg);
+    }
   }
 `
 

@@ -30,6 +30,12 @@ export const Text = styled.h1`
     left: 50%;
     transform: translate(-50%, -50%);
     transition: ease-in-out 1s;
+    @media (max-width: 1080px){
+    font-size: 40px;
+    }
+    @media (max-width: 768px) {
+    font-size: 28px;
+    }
 `
 
 export const Logo = styled.span<Active>`

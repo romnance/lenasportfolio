@@ -22,7 +22,7 @@ export const Header = styled.header<Scroll>`
     position: fixed;
     top: 0px;
     z-index: 11;
-    padding: 0px 50px;
+    padding: 0px 100px;
     width: 100%;
     height: var(--nav-height);
     background-color: rgba(255, 255, 255, 0.85);

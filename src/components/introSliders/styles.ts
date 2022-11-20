@@ -13,10 +13,13 @@ export const Slider = styled.div`
     width: 90%;
     height: 750px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     transition: 0.4s ease-out;
     position: relative;
     left: calc(50% - 45%);
+    margin-bottom: 200px;
 `
 
 export const Section = styled.section<Color>`
@@ -25,48 +28,51 @@ export const Section = styled.section<Color>`
     justify-content: center;
     align-items: center;
     height: 70vh;
-    width: 80%;
-    padding-top:8px;
+    width: 70vw;
     background-color: ${(props) => props.color};
     border-radius: 48px;
-    margin: 24px 0;
+    margin: 50px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 1, 0.08);
     transition: 0.2s linear 0.2s;
     &:nth-child(1) {
-        top: 18%;
+        top: 16%;
         z-index: 3;
         position: absolute;
-        left: 9%;
         transform-origin: left 2px;
-        &:hover {
-            top: 16%;
-            left: 10%;
-            transition: 0.4s ease-out;
-            }
-        }
     }
     &:nth-child(2) {
         z-index: 2;
         position: relative;
-        left: 10%;
-        top: 3%;
-        transform: rotate(358deg);
+        top: 0%;
+        transform: rotate(355deg);
         &:hover {
             top: 2%;
             transition: 0.4s ease-out;
         }
-    }
-    &:nth-child(3) {
-        z-index: 1;
-        top: 17%;
-        position: absolute;
-        left: 12%;
-        transform: rotate(1deg)
+        @media (max-width: 1080px){
+        top: -3%;
         &:hover {
-            top:19%;
-            transform: rotate(6deg)
-            transition: 0.4s ease-out;
+        top: -3.5%;
+        transition: 0.4s ease-out;
         }
+        }
+        @media (max-width: 768px) {
+          top: -5.5%;
+            &:hover {
+            top: -6.5%;
+            transition: 0.4s ease-out;
+            }
+        }
+    }
+    @media (max-width: 1080px){
+    height: 70vh;
+    width: 90vw;
+    margin: 20px 0;
+    }
+    @media (max-width: 768px) {
+    height: 70vh;
+    width: 85vw;
+    margin: 20px 0;
     }
 `
 
@@ -76,19 +82,27 @@ export const Div = styled.div`
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    width: 1000px;
 `
 
 export const Emoji = styled.div`
-    height: 200px;
-    width: 200px;
+    height: 160px;
+    width: 160px;
     display: inline-block;
     text-align: center;
     position: relative;
     overflow: hidden;
     text-align: center;
-    background: rgba(246, 246, 246, 1);
+    margin-bottom: 32px;
+    background: #FEFEFF;
     border-radius: 50%;
+    @media (max-width: 768px) {
+    height: 100px;
+    width: 100px;
+    }
+    @media (max-width: 1080px){
+    height: 130px;
+    width: 130px;
+    }
 `
 
 export const Img = styled.img`
@@ -105,13 +119,22 @@ export const Title = styled.h4`
     font-style: normal;
     font-weight: 600;
     font-size: var(--fz-heading);
-    line-height: calc(var(--fz-heading)*1.2);
+    margin: 0px;
+    line-height: calc(var(--fz-heading)*1.1);
     text-align: center;
+    @media (max-width: 1080px){
+     font-size: 36px;
+    line-height: calc(36px*1.1);
+    }
+    @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: calc(24px*1.1);
+    }
 `
 
 
 export const CurrentSliderContainer = styled.div`
-    top: 80%;
+    top: 87vh;
     z-index: 5;
     left: calc(48% - 45px);
     position: absolute;
@@ -123,13 +146,19 @@ export const CurrentSliderContainer = styled.div`
     height: 16px;
     opacity: 1;
     transition: var(--transition);
+     @media (max-width: 1080px){
+      top: 84vh;
+    }
+    @media (max-width: 768px) {
+    top: 80vh;
+    }
 
 `
 
 export const CurrentSlider = styled.div`
     width: 26px;
     height: 16px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: #B4A4E6;
     border-radius: 13px;
 `
 
@@ -138,5 +167,5 @@ export const InactiveSlider = styled.div`
     height: 14px;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 13px;
-    border: 1px solid #000000;
+    border: 1px solid #B4A4E6;
 `

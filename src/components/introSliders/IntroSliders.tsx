@@ -23,9 +23,8 @@ const IntroSliders: FC<Props> = () => {
     if (currentPage === 1) {
         return (    
         <>   
-            <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />     
-            <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
-            <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+            <SliderCard cb={nextPage} imgLink={First} color="#F3EFE7" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />     
+            <SliderCard cb={nextPage} imgLink={Second} color="#E8E4F5" paragraph1="1+ years of experience" paragraph2="in B2C product" />
             <CurrentSliderContainer>
             <CurrentSlider /><InactiveSlider /><InactiveSlider />
             </CurrentSliderContainer>
@@ -37,9 +36,8 @@ const IntroSliders: FC<Props> = () => {
     if (currentPage === 2) {
         return (    
         <>       
-            <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
-            <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
-            <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
+            <SliderCard cb={nextPage} imgLink={Second} color="#E8E4F5" paragraph1="1+ years of experience in" paragraph2="B2C product" />
+            <SliderCard cb={nextPage} imgLink={Third} color="#F3EFE7" paragraph1="Multitasking and love" paragraph2="to explore new things" />
             <CurrentSliderContainer>
             <InactiveSlider /><CurrentSlider /><InactiveSlider />
             </CurrentSliderContainer>
@@ -51,9 +49,8 @@ const IntroSliders: FC<Props> = () => {
     if (currentPage === 3) {
         return (    
         <>       
-            <SliderCard cb={nextPage} imgLink={Third} color="#BCB8F0" paragraph1="Multitasking and love" paragraph2="to explore new things" />
-            <SliderCard cb={nextPage} imgLink={First} color="#F3D3AD" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
-            <SliderCard cb={nextPage} imgLink={Second} color="#D1EBCB" paragraph1="1+ years of experience" paragraph2="in B2C product" />
+            <SliderCard cb={nextPage} imgLink={Third} color="#F3EFE7" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+            <SliderCard cb={nextPage} imgLink={First} color="#E8E4F5" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
             <CurrentSliderContainer>
             <InactiveSlider /><InactiveSlider /><CurrentSlider />
             </CurrentSliderContainer>
