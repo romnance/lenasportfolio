@@ -95,9 +95,13 @@ export const Li = styled.li<ILi>`
     transition-delay: ${(props) => props.transition};
     margin: 0px 12px;
     position: relative;
-    counter-increment: item 1;
     font-size: var(--fz-xxl);
     display: list-item;
+    &:hover {
+        transform: scale(1.1);
+        transition: var(--transition);
+        color: #5D35E8;
+    }
 `
 export const A = styled.a`
     display: inline-block;

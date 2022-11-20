@@ -46,13 +46,13 @@ export const Section = styled.section<Color>`
         top: 0%;
         transform: rotate(355deg);
         &:hover {
-            top: 2%;
+            top: -2%;
             transition: 0.4s ease-out;
         }
         @media (max-width: 1080px){
         top: -3%;
         &:hover {
-        top: -3.5%;
+        top: -4%;
         transition: 0.4s ease-out;
         }
         }
