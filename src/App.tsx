@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import HeaderComponent from './components/header/Header';
 import Intro from './components/intro/Intro';
 import IntroSliders from './components/introSliders/IntroSliders';
+import WhatIDo from "./components/whatIDo/WhatIDo";
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -14,9 +15,10 @@ function App() {
 
   return (
     <>
-    {!showIntro && <HeaderComponent />}
-    <Intro />
-    <IntroSliders />
+      {!showIntro && <HeaderComponent />}
+      <Intro />
+      <IntroSliders />
+      <WhatIDo />
     </>
   );
 }
