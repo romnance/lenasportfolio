@@ -20,43 +20,88 @@ const IntroSliders: FC<Props> = () => {
     }
 
     const firstPage = () => {
-    if (currentPage === 1) {
-        return (    
-        <>   
-            <SliderCard cb={nextPage} imgLink={First} color="#F3EFE7" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" />     
-            <SliderCard cb={nextPage} imgLink={Second} color="#E8E4F5" paragraph1="1+ years of experience" paragraph2="in B2C product" />
+      if (currentPage === 1) {
+        return (
+          <>
+            <SliderCard
+              cb={nextPage}
+              imgLink={First}
+              color="#F3F1FA"
+              paragraph1="Hi, I'm Lena,"
+              paragraph2="UX/UI Designer"
+            />
+            <SliderCard
+              cb={nextPage}
+              imgLink={Second}
+              color="#E8E4F5"
+              paragraph1="1+ years of experience"
+              paragraph2="in B2C product"
+            />
             <CurrentSliderContainer>
-            <CurrentSlider /><InactiveSlider /><InactiveSlider />
+              <CurrentSlider />
+              <InactiveSlider />
+              <InactiveSlider />
             </CurrentSliderContainer>
-        </>)
-        }
-    }
+          </>
+        );
+      }
+    };
 
     const secondPage = () => {
-    if (currentPage === 2) {
-        return (    
-        <>       
-            <SliderCard cb={nextPage} imgLink={Second} color="#E8E4F5" paragraph1="1+ years of experience in" paragraph2="B2C product" />
-            <SliderCard cb={nextPage} imgLink={Third} color="#F3EFE7" paragraph1="Multitasking and love" paragraph2="to explore new things" />
+      if (currentPage === 2) {
+        return (
+          <>
+            <SliderCard
+              cb={nextPage}
+              imgLink={Second}
+              color="#F3F1FA"
+              paragraph1="1+ years of experience in"
+              paragraph2="B2C product"
+            />
+            <SliderCard
+              cb={nextPage}
+              imgLink={Third}
+              color="#E8E4F5"
+              paragraph1="Multitasking and love"
+              paragraph2="to explore new things"
+            />
             <CurrentSliderContainer>
-            <InactiveSlider /><CurrentSlider /><InactiveSlider />
+              <InactiveSlider />
+              <CurrentSlider />
+              <InactiveSlider />
             </CurrentSliderContainer>
-        </>)
-        }
-    }
+          </>
+        );
+      }
+    };
 
     const thirdPage = () => {
-    if (currentPage === 3) {
-        return (    
-        <>       
-            <SliderCard cb={nextPage} imgLink={Third} color="#F3EFE7" paragraph1="Multitasking and love" paragraph2="to explore new things" />
-            <SliderCard cb={nextPage} imgLink={First} color="#E8E4F5" paragraph1="Hi, I'm Lena," paragraph2="UX/UI Designer" /> 
+      if (currentPage === 3) {
+        return (
+          <>
+            <SliderCard
+              cb={nextPage}
+              imgLink={Third}
+              color="#F3F1FA"
+              paragraph1="Multitasking and love"
+              paragraph2="to explore new things"
+            />
+            <SliderCard
+              cb={nextPage}
+              imgLink={First}
+              color="#E8E4F5"
+              paragraph1="Hi, I'm Lena,"
+              paragraph2="UX/UI Designer"
+            />
             <CurrentSliderContainer>
-            <InactiveSlider /><InactiveSlider /><CurrentSlider />
+              <InactiveSlider />
+              <InactiveSlider />
+              <CurrentSlider />
             </CurrentSliderContainer>
-        </>)
-        }
-    }
+          </>
+        );
+      }
+    };
 
 return (
     <Slider>
