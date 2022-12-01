@@ -19,6 +19,11 @@ export default function Intro () {
     },[])
 
     return (
-        <IntroDiv hide={hide}><Text><Logo active={show}>Lena&nbsp;</Logo><Logo active={show2}>Klimova</Logo></Text></IntroDiv>
-    )
+      <IntroDiv hide={hide}>
+        <Text>
+          <Logo active={show}>Lena&nbsp;Klimova</Logo>
+          <Logo active={show2}>UI/UX&nbsp;Designer</Logo>
+        </Text>
+      </IntroDiv>
+    );
 };
