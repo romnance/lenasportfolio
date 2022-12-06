@@ -9,33 +9,31 @@ interface Link {
 }
 
 export const Slider = styled.div`
-    padding-top: 100px;
-    width: 90%;
-    height: 750px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    transition: 0.4s ease-out;
-    position: relative;
-    left: calc(50% - 45%);
-    margin-bottom: 200px;
-`
+  width: 90%;
+  display: flex;
+  padding-top: 80px;
+  margin: 100px auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 0.4s ease-out;
+`;
 
 export const Section = styled.section<Color>`
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 75vh;
-  width: 70vw;
+  height: 80vh;
+  width: clamp(85vw, 80vw, 1920px);
+  padding: 0 12px;
   background-color: ${(props) => props.color};
   border-radius: 48px;
-  margin: 50px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 1, 0.08);
   transition: 0.2s linear 0.2s;
   &:nth-child(1) {
-    top: 16%;
+    top: 180px;
     z-index: 3;
     position: absolute;
     transform-origin: left 2px;
@@ -43,34 +41,29 @@ export const Section = styled.section<Color>`
   &:nth-child(2) {
     z-index: 2;
     position: relative;
-    top: -4%;
+    top: -11%;
+    width: clamp(85vw, 80vw, 1920px);
     transform: rotate(355deg);
     &:hover {
-      top: -2%;
+      top: -13%;
       transition: 0.4s ease-out;
     }
-    @media (max-width: 1080px) {
-      top: -3%;
-      &:hover {
-        top: -4%;
-        transition: 0.4s ease-out;
-      }
-    }
     @media (max-width: 768px) {
-      top: -5.5%;
+      top: -20%;
+      width: 90vw;
       &:hover {
-        top: -6.5%;
+        top: -21%;
         transition: 0.4s ease-out;
       }
     }
   }
   @media (max-width: 1080px) {
-    height: 70vh;
-    width: 90vw;
+    height: 75vh;
+    width: 85vw;
     margin: 20px 0;
   }
   @media (max-width: 768px) {
-    height: 70vh;
+    height: 60vh;
     width: 85vw;
     margin: 20px 0;
   }
@@ -78,10 +71,10 @@ export const Section = styled.section<Color>`
 
 export const Div = styled.div`
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   height: fit-content;
+  box-sizing: border-box;
 `;
 
 export const Emoji = styled.div`
@@ -89,7 +82,6 @@ export const Emoji = styled.div`
   width: 160px;
   display: inline-block;
   text-align: center;
-  position: relative;
   overflow: hidden;
   text-align: center;
   margin-bottom: 32px;
@@ -108,9 +100,6 @@ export const Emoji = styled.div`
 export const Img = styled.img`
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   object-fit: cover;
   opacity: 1;
 `;
@@ -133,7 +122,7 @@ export const Title = styled.h4`
 `;
 
 export const CurrentSliderContainer = styled.div`
-  top: 94vh;
+  top: 98vh;
   z-index: 5;
   left: calc(50% - 50px);
   position: absolute;
@@ -146,7 +135,7 @@ export const CurrentSliderContainer = styled.div`
   opacity: 1;
   transition: var(--transition);
   @media (max-width: 1080px) {
-    top: 84vh;
+    top: 95vh;
   }
   @media (max-width: 768px) {
     top: 80vh;

@@ -5,25 +5,22 @@ interface Link {
 }
 
 export const Container = styled.div`
-  @media (max-width: 1000px) {
-    padding: 0px 60px;
-  }
-  @media (max-width: 600px) {
-    padding: 0px 24px;
-  }
-  padding: 0px 100px;
   width: 100%;
   box-sizing: border-box;
 `;
 
-export const Div = styled.div`
+export const Row1 = styled.div`
   display: flex;
-  align-items: center;
-  height: fit-content;
-  box-sizing: border-box;
+  flex-direction: row;
+`;
+
+export const Row2 = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 export const Heading = styled.h1`
+  padding-top: 100px;
   font-size: 60px;
   font-weight: 600;
   color: #1b1b1b;
@@ -31,11 +28,13 @@ export const Heading = styled.h1`
   @media (max-width: 1000px) {
     font-size: 42px;
     margin-bottom: 24px;
+    padding-top: 80px;
   }
   @media (max-width: 600px) {
     font-size: 32px;
     margin-bottom: 12px;
     margin-left: 8px;
+    padding-top: 30px;
   }
 `;
 

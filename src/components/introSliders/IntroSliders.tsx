@@ -33,7 +33,7 @@ const IntroSliders: FC<Props> = () => {
             <SliderCard
               cb={nextPage}
               imgLink={Second}
-              color="#E8E4F5"
+              color="rgba(245, 244, 251, 0.5)"
               paragraph1="1+ years of experience"
               paragraph2="in B2C product"
             />
@@ -61,7 +61,7 @@ const IntroSliders: FC<Props> = () => {
             <SliderCard
               cb={nextPage}
               imgLink={Third}
-              color="#E8E4F5"
+              color="rgba(245, 244, 251, 0.5)"
               paragraph1="Multitasking and love"
               paragraph2="to explore new things"
             />
@@ -89,7 +89,7 @@ const IntroSliders: FC<Props> = () => {
             <SliderCard
               cb={nextPage}
               imgLink={First}
-              color="#E8E4F5"
+              color="rgba(245, 244, 251, 0.5)"
               paragraph1="Hi, I'm Lena,"
               paragraph2="UX/UI Designer"
             />

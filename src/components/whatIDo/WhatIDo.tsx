@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container, Div, Heading } from "./styles";
+import { Container, Row1, Row2, Heading } from "./styles";
 import Pill from "./Pill";
 import RoundPill from "./RoundPill";
 import First from "../../images/Clouds.png";
@@ -11,18 +11,18 @@ const WhatIDo: FC<Props> = () => {
   return (
     <Container>
       <Heading>What&nbsp;I&nbsp;Do</Heading>
-      <Div>
+      <Row1>
         <Pill text="User&nbsp;Research" />
         <RoundPill imgLink={First} />
         <Pill text="User&nbsp;Testing" />
         <Pill text="Wireframing" />
-      </Div>
-      <Div>
+      </Row1>
+      <Row2>
         <Pill text="Prototyping" />
         <Pill text="Information&nbsp;Architecture" />
         <RoundPill imgLink={Second} />
         <Pill text="Visual&nbsp;Design" />
-      </Div>
+      </Row2>
     </Container>
   );
 };

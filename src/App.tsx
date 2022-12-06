@@ -17,8 +17,12 @@ function App() {
     <>
       {!showIntro && <HeaderComponent />}
       <Intro />
-      <IntroSliders />
-      <WhatIDo />
+      <div className="Common-container">
+        <IntroSliders />
+      </div>
+      <div className="Common-container">
+        <WhatIDo />
+      </div>
     </>
   );
 }

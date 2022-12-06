@@ -21,7 +21,7 @@ export default function Intro () {
     return (
       <IntroDiv hide={hide}>
         <Text>
-          <Logo active={show}>Lena&nbsp;Klimova</Logo>
+          <Logo active={show}>Lena&nbsp;Klimova&nbsp;</Logo>
           <Logo active={show2}>UI/UX&nbsp;Designer</Logo>
         </Text>
       </IntroDiv>
