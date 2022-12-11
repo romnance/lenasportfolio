@@ -20,7 +20,10 @@ const GlobalStyles = createGlobalStyle`
     --primary-black: #1B1B1B;
     --grey: rgba(220, 220, 220, 1);
     --light-grey: #F6F6F6;
+    --grey: #5A5A5A;
     --light-purple: #EAD6EE;
+    --light-green: #D4F1DB;
+    --purple: #B4A4E6;
     --navy-shadow: rgba(2,12,27,0.2);
     --white: #e6f1ff;
     --fz-xxs: 12px;

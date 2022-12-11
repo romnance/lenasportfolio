@@ -7,6 +7,7 @@ interface Link {
 export const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 100px;
 `;
 
 export const Row1 = styled.div`
