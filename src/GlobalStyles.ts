@@ -67,11 +67,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0px 100px;
     width: 100%;
     box-sizing: border-box;
-    @media (max-width: 768px) {
-    padding: 0px 25px;
-  }
     @media (max-width: 1080px){
     padding: 0px 40px;
+  }
+    @media (max-width: 768px) {
+    padding: 0px 25px;
   }
   }
 `;
