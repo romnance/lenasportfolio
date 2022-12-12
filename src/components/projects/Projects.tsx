@@ -58,11 +58,11 @@ const Projects: FC<Props> = () => {
   const [showThird, setShowThird] = useState(false);
   const [showFourth, setShowFourth] = useState(false);
 
-  const MINIMUM_SCROLL = 500;
-  const MINIMUM_SCROLL_2 = 1500;
+  const MINIMUM_SCROLL = 1000;
+  const MINIMUM_SCROLL_2 = 1900;
   const MINIMUM_SCROLL_3 = 2400;
   const MINIMUM_SCROLL_4 = 3400;
-  const TIMEOUT_DELAY = 400;
+  const TIMEOUT_DELAY = 300;
 
   useEffect(() => {
     setShowFirst(true);
@@ -76,9 +76,9 @@ const Projects: FC<Props> = () => {
     const isMinimumScrolled4 = currentScrollTop > MINIMUM_SCROLL_4;
     setTimeout(() => {
       setShowFirst(isMinimumScrolled);
-      setShowSecond(isMinimumScrolled2);
-      setShowThird(isMinimumScrolled3);
-      setShowFourth(isMinimumScrolled4);
+      if (isMinimumScrolled2) setShowSecond(true);
+      if (isMinimumScrolled3) setShowThird(true);
+      if (isMinimumScrolled4) setShowFourth(true);
     }, TIMEOUT_DELAY);
   });
 

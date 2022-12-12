@@ -17,7 +17,7 @@ export const Container = styled.div<Active>`
   position: relative;
   transform: ${(props) => (props.active ? "translateY(0)" : "translateY(150px)")};
   opacity: ${(props) => (props.active ? "1" : "0")};
-  transition: 1s all ease;
+  transition: 0.5s all ease;
 `;
 
 export const Heading = styled.h1`
