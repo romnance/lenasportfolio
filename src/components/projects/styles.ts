@@ -133,6 +133,14 @@ export const ProjectHeading = styled.h3`
   font-size: 40px;
   line-height: 48px;
   margin: 0;
+  @media (max-width: 1080px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  @media (max-width: 768px) {
+    font-size: 34px;
+    line-height: 40px;
+  }
 `;
 
 export const Description = styled.p`
@@ -140,6 +148,12 @@ export const Description = styled.p`
   font-weight: 400;
   font-size: 24px;
   line-height: 117%;
+  @media (max-width: 1080px) {
+    font-size: 22px;
+  }
+  @media (max-width: 768px) {
+    font-size: 19px;
+  }
 `;
 
 export const Date = styled.p`
@@ -164,4 +178,12 @@ export const GreenTag = styled.div`
   padding: 6px 28px;
   color: var(--grey);
   background-color: var(--light-green);
+  @media (max-width: 1080px) {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 6px 20px;
+  }
 `;
