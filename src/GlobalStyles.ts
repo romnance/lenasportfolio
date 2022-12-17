@@ -55,7 +55,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #FFFFFF;
+    background-color: #FEFEFF;
       @media (max-width: 768px) {
      font-size: var(--fz-md);
     }

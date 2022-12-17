@@ -8,6 +8,8 @@ import {
   Description,
   Date,
   TagsContainer,
+  PurpleTag,
+  ControlPillMobile,
   GreenTag,
 } from "./styles";
 
@@ -17,9 +19,10 @@ type Props = {
   date: string;
   imgLink: string;
   tags: string[];
+  purpleTag: Boolean;
 };
 
-const Project: FC<Props> = ({ heading, description, date, imgLink, tags }) => {
+const Project: FC<Props> = ({ heading, description, date, imgLink, tags, purpleTag }) => {
   return (
     <ProjectContainer>
       <Left>
@@ -34,6 +37,11 @@ const Project: FC<Props> = ({ heading, description, date, imgLink, tags }) => {
       </Left>
       <Right>
         <Img src={imgLink} />
+        {purpleTag && (
+          <ControlPillMobile>
+            <PurpleTag>Coming soon</PurpleTag>
+          </ControlPillMobile>
+        )}
       </Right>
     </ProjectContainer>
   );

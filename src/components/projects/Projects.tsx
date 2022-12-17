@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import useDocumentScrollThrottled from "../../helpers/documentScroll";
-import { Container, Heading, PurpleTag } from "./styles";
+import { Container, Heading, PurpleTag, ControlPillDesktop } from "./styles";
 import Project from "./Project";
 import First from "../../images/Olivia.png";
 import Second from "../../images/Motorica.png";
@@ -87,13 +87,16 @@ const Projects: FC<Props> = () => {
       <Container active={showFirst}>
         <div className="Common-container">
           <Heading>Projects</Heading>
-          <PurpleTag>Coming soon</PurpleTag>
+          <ControlPillDesktop>
+            <PurpleTag>Coming soon</PurpleTag>
+          </ControlPillDesktop>
           <Project
             heading={content[0].heading}
             description={content[0].description}
             date={content[0].date}
             tags={content[0].tags}
             imgLink={First}
+            purpleTag={true}
           />
         </div>
       </Container>
@@ -105,6 +108,7 @@ const Projects: FC<Props> = () => {
             date={content[1].date}
             tags={content[1].tags}
             imgLink={Second}
+            purpleTag={false}
           />
         </div>
       </Container>
@@ -116,6 +120,7 @@ const Projects: FC<Props> = () => {
             date={content[2].date}
             tags={content[2].tags}
             imgLink={Third}
+            purpleTag={false}
           />
         </div>
       </Container>
@@ -127,6 +132,7 @@ const Projects: FC<Props> = () => {
             date={content[3].date}
             tags={content[3].tags}
             imgLink={Fourth}
+            purpleTag={false}
           />
         </div>
       </Container>

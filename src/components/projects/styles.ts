@@ -8,7 +8,7 @@ export const Container = styled.div<Active>`
   width: 100%;
   margin-top: 100px;
   margin-bottom: 0px;
-  padding: 100px 0 0;
+  padding: 130px 0 0;
   box-sizing: border-box;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
@@ -18,6 +18,12 @@ export const Container = styled.div<Active>`
   transform: ${(props) => (props.active ? "translateY(0)" : "translateY(150px)")};
   opacity: ${(props) => (props.active ? "1" : "0")};
   transition: 0.5s all ease;
+  @media (max-width: 1000px) {
+    padding: 100px 0 0;
+  }
+  @media (max-width: 600px) {
+    padding: 100px 0 0;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -28,9 +34,26 @@ export const Heading = styled.h1`
   @media (max-width: 1000px) {
     font-size: 42px;
   }
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+  }
   @media (max-width: 600px) {
     font-size: 32px;
     margin-left: 8px;
+  }
+`;
+
+export const ControlPillDesktop = styled.div`
+  display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const ControlPillMobile = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
   }
 `;
 
@@ -48,7 +71,9 @@ export const PurpleTag = styled.div`
   line-height: 21px;
   color: white;
   background-color: var(--purple);
-  border-radius: ;
+  @media (max-width: 768px) {
+    margin: 32px 0px 24px;
+  }
 `;
 
 export const ProjectContainer = styled.div`
@@ -57,6 +82,13 @@ export const ProjectContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  margin: 0px;
+  @media (max-width: 1000px) {
+    flex-direction: row;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Left = styled.div`
@@ -65,11 +97,11 @@ export const Left = styled.div`
   width: 45%;
   align-items: flex-start;
   margin-right: 24px;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
   @media (max-width: 1080px) {
     width: 45%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -80,11 +112,11 @@ export const Right = styled.div`
   text-align: center;
   width: 55%;
   margin-bottom: 32px;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
   @media (max-width: 1080px) {
     width: 55%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
