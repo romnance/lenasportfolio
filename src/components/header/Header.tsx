@@ -37,31 +37,51 @@ export default function HeaderComponent (_props: IHeaderProps) {
   }
 
   return (
-    <Header shadowStyle={shadowStyle} hiddenStyle={hiddenStyle} >
+    <Header shadowStyle={shadowStyle} hiddenStyle={hiddenStyle}>
       <Nav>
-        <Logo><Link>Lena&nbsp;Klimova</Link></Logo>
+        <Logo>
+          <Link>Lena&nbsp;Klimova</Link>
+        </Logo>
         <Links>
           <Ol>
-            <Li transition={"0ms"} ><A href='#'>What I Do</A></Li>
-            <Li transition={"100ms"}><A href='#'>Projects</A></Li>
-            <Li transition={"200ms"}><A href='#'>Get in touch</A></Li>
+            <Li transition={"0ms"}>
+              <A href="#what-i-do">What I Do</A>
+            </Li>
+            <Li transition={"100ms"}>
+              <A href="#projects">Projects</A>
+            </Li>
+            <Li transition={"200ms"}>
+              <A href="#get-in-touch">Get in touch</A>
+            </Li>
           </Ol>
         </Links>
         <Menu>
           <div>
             <Button onClick={menuOpener}>
               <HamBox>
-                  <HamBoxInner visible={openMenu ? "visible" : "hidden"}></HamBoxInner>
+                <HamBoxInner visible={openMenu ? "visible" : "hidden"}></HamBoxInner>
               </HamBox>
             </Button>
             <Sidebar visible={openMenu ? "visible" : "hidden"}>
-            <AsideNav visible={openMenu ? "visible" : "hidden"}>
-              <AsideOl>
-                  <AsideLi><AsideA href='#'>What I Do</AsideA></AsideLi>
-                  <AsideLi><AsideA href='#'>Projects</AsideA></AsideLi>
-                  <AsideLi><AsideA href='#'>Get in touch</AsideA></AsideLi>
-              </AsideOl>
-            </AsideNav>
+              <AsideNav visible={openMenu ? "visible" : "hidden"}>
+                <AsideOl>
+                  <AsideLi>
+                    <AsideA href="#what-i-do" onClick={menuOpener}>
+                      What I Do
+                    </AsideA>
+                  </AsideLi>
+                  <AsideLi>
+                    <AsideA href="#projects" onClick={menuOpener}>
+                      Projects
+                    </AsideA>
+                  </AsideLi>
+                  <AsideLi>
+                    <AsideA href="#get-in-touch" onClick={menuOpener}>
+                      Get in touch
+                    </AsideA>
+                  </AsideLi>
+                </AsideOl>
+              </AsideNav>
             </Sidebar>
           </div>
         </Menu>

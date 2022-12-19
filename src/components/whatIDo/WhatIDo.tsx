@@ -9,7 +9,7 @@ type Props = {};
 
 const WhatIDo: FC<Props> = () => {
   return (
-    <Container>
+    <Container id="what-i-do">
       <Heading>What&nbsp;I&nbsp;Do</Heading>
       <RowDesktop>
         <Pill text="User&nbsp;Research" />

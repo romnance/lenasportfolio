@@ -85,7 +85,7 @@ const Projects: FC<Props> = () => {
 
   return (
     <>
-      <Container active={showFirst}>
+      <Container active={showFirst} id="projects">
         <div className="Common-container">
           <Heading>Projects</Heading>
           <ControlPillDesktop>

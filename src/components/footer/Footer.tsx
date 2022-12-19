@@ -3,7 +3,7 @@ import First from "../../images/1-2.png";
 
 export default function Footer() {
   return (
-    <Container>
+    <Container id="get-in-touch">
       <div>
         <Heading>Get in touch</Heading>
         <P>
