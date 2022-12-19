@@ -20,9 +20,13 @@ export const Container = styled.div<Active>`
   transition: 0.5s all ease;
   @media (max-width: 1000px) {
     padding: 100px 0 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
   @media (max-width: 600px) {
     padding: 100px 0 0;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
   }
 `;
 

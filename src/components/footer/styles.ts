@@ -8,9 +8,6 @@ export const Container = styled.div`
   box-sizing: border-box;
   margin: 80px 0;
   padding: 57px 60px 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   @media (max-width: 1000px) {
     padding: 50px 30px 24px;
   }
@@ -55,11 +52,19 @@ export const Emoji = styled.div`
     width: 90px;
     margin: 0;
   }
+  @media (max-width: 468px) {
+    height: 70px;
+    width: 70px;
+    padding-bottom: 6px;
+    margin: 0;
+    box-sizing: border-box;
+  }
 `;
 
 export const Img = styled.img`
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   object-fit: cover;
   opacity: 1;
 `;
@@ -79,6 +84,15 @@ export const P = styled.p`
     font-size: 16px;
     line-height: 21px;
   }
+  @media (max-width: 468px) {
+    max-width: 200px;
+  }
+`;
+
+export const RowSimple = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const Row = styled.div`

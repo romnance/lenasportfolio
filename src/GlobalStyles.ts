@@ -68,10 +68,11 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     box-sizing: border-box;
     @media (max-width: 1080px){
-    padding: 0px 40px;
+    padding: 0px 30px;
   }
     @media (max-width: 768px) {
-    padding: 0px 25px;
+    padding: 0px 20px;
+    overflow: hidden;
   }
   }
 `;
