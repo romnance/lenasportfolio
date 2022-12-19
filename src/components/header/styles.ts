@@ -92,17 +92,16 @@ export const Ol = styled.ol`
     padding-inline-start: 40px;
 `
 export const Li = styled.li<ILi>`
-    transition-delay: ${(props) => props.transition};
-    margin: 0px 12px;
-    position: relative;
-    font-size: var(--fz-xxl);
-    display: list-item;
-    &:hover {
-        transform: scale(1.1);
-        transition: var(--transition);
-        color: #5D35E8;
-    }
-`
+  transition-delay: ${(props) => props.transition};
+  margin: 0px 12px;
+  position: relative;
+  font-size: var(--fz-xxl);
+  display: list-item;
+  &:hover {
+    transition: var(--transition);
+    color: #b4a4e6;
+  }
+`;
 export const A = styled.a`
     display: inline-block;
     text-decoration: none;
