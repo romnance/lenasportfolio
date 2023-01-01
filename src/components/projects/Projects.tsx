@@ -75,8 +75,8 @@ const Projects: FC<Props> = () => {
     const isMinimumScrolled3 = currentScrollTop > MINIMUM_SCROLL_3;
     const isMinimumScrolled4 = currentScrollTop > MINIMUM_SCROLL_4;
     setTimeout(() => {
-      setShowFirst(isMinimumScrolled);
-      // if (isMinimumScrolled) setShowFirst(true);
+      // setShowFirst(isMinimumScrolled);
+      if (isMinimumScrolled) setShowFirst(true);
       if (isMinimumScrolled2) setShowSecond(true);
       if (isMinimumScrolled3) setShowThird(true);
       if (isMinimumScrolled4) setShowFourth(true);
@@ -85,9 +85,11 @@ const Projects: FC<Props> = () => {
 
   return (
     <>
+      <div className="Common-container">
+        <Heading>Projects</Heading>
+      </div>
       <Container active={showFirst} id="projects">
         <div className="Common-container">
-          <Heading>Projects</Heading>
           <ControlPillDesktop>
             <PurpleTag>Coming soon</PurpleTag>
           </ControlPillDesktop>

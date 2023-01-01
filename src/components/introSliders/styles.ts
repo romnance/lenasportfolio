@@ -145,7 +145,7 @@ export const CurrentSliderContainer = styled.div`
 export const CurrentSlider = styled.div`
   width: 26px;
   height: 16px;
-  background-color: #b4a4e6;
+  background-color: #1b1b1b;
   border-radius: 13px;
 `;
 
@@ -154,5 +154,5 @@ export const InactiveSlider = styled.div`
   height: 14px;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 13px;
-  border: 1px solid #b4a4e6;
+  border: 1px solid #1b1b1b;
 `;

@@ -15,91 +15,94 @@ interface Scroll {
 
 
 export const Header = styled.header<Scroll>`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0px;
-    z-index: 11;
-    padding: 0px 100px;
-    width: 100%;
-    height: var(--nav-height);
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    box-shadow: ${(props) => props.shadowStyle};
-    filter: none !important;
-    pointer-events: auto !important;
-    user-select: auto !important;
-    transform: ${(props) => props.hiddenStyle};
-    transition: transform 0.3s ease;
-   @media (max-width: 768px) {
-    padding: 0px 25px;
-  }
-  @media (max-width: 1080px){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  z-index: 11;
+  padding: 0px 100px;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: ${(props) => props.shadowStyle};
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+  transform: ${(props) => props.hiddenStyle};
+  transition: transform 0.3s ease;
+  @media (max-width: 1080px) {
     padding: 0px 40px;
   }
-`
+  @media (max-width: 768px) {
+    padding: 0px 25px;
+  }
+`;
 
 export const Nav = styled.nav`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    color: var(--primary-black);
-    counter-reset: item 0;
-    z-index: 12;
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: var(--primary-black);
+  counter-reset: item 0;
+  z-index: 12;
+`;
 
 export const Logo = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export const Link = styled.a`
-    color: var(--primary-black);
-    width: fit-content;
-    height: fit-content;
-    font-style: normal;
-    font-weight: 500;
-    font-size: var(--fz-xxl);
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: var(--transition);
-`
+  color: var(--primary-black);
+  width: fit-content;
+  height: fit-content;
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fz-xxl);
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: var(--transition);
+`;
 
 export const Links = styled.div`
-    align-items: center; 
-    @media (max-width: 768px){
+  align-items: center;
+  @media (max-width: 768px) {
     display: none;
-    }
-`
+  }
+`;
 
 export const Ol = styled.ol`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+`;
 export const Li = styled.li<ILi>`
   transition-delay: ${(props) => props.transition};
-  margin: 0px 12px;
+  margin: 0px 0px 0px 41px;
   position: relative;
   font-size: var(--fz-xxl);
   display: list-item;
   &:hover {
     transition: var(--transition);
     color: #b4a4e6;
+  }
+  @media (max-width: 1080px) {
+    margin: 0px 0px 0px 32px;
   }
 `;
 export const A = styled.a`

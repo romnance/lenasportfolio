@@ -64,14 +64,14 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   .Common-container {
-    padding: 0px 100px;
+    padding: 0px 112px;
     width: 100%;
     box-sizing: border-box;
     @media (max-width: 1080px){
-    padding: 0px 30px;
+    padding: 0px 38px;
   }
     @media (max-width: 768px) {
-    padding: 0px 20px;
+    padding: 0px 28px;
     overflow: hidden;
   }
   }

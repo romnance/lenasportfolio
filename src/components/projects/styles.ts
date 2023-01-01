@@ -6,7 +6,7 @@ interface Active {
 
 export const Container = styled.div<Active>`
   width: 100%;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 0px;
   padding: 130px 0 0;
   box-sizing: border-box;
@@ -39,7 +39,6 @@ export const Heading = styled.h1`
     font-size: 42px;
   }
   @media (max-width: 768px) {
-    margin-bottom: 50px;
   }
   @media (max-width: 600px) {
     font-size: 32px;
@@ -69,14 +68,14 @@ export const PurpleTag = styled.div`
   border-radius: 100px;
   width: fit-content;
   padding: 6px 32px;
-  margin: 60px 0px 30px;
+  margin: 16px 0px 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: white;
   background-color: var(--purple);
   @media (max-width: 768px) {
-    margin: 32px 0px 24px;
+    margin: 16px 0px 16px;
   }
 `;
 
@@ -86,11 +85,13 @@ export const ProjectContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  margin: 0px;
+  margin: 0px 0px 150px;
   @media (max-width: 1000px) {
     flex-direction: row;
+    margin: 0px 0px 80px;
   }
   @media (max-width: 768px) {
+    margin: 0px 0px 60px;
     flex-direction: column-reverse;
   }
 `;
@@ -100,12 +101,13 @@ export const Left = styled.div`
   flex-direction: column;
   width: 45%;
   align-items: flex-start;
-  margin-right: 24px;
+  margin-right: 90px;
   @media (max-width: 1080px) {
     width: 45%;
   }
   @media (max-width: 768px) {
     width: 100%;
+    margin-right: 0px;
   }
 `;
 
@@ -115,7 +117,7 @@ export const Right = styled.div`
   overflow: hidden;
   text-align: center;
   width: 55%;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   @media (max-width: 1080px) {
     width: 55%;
   }
@@ -135,11 +137,11 @@ export const ProjectHeading = styled.h3`
   color: var(--primary-black);
   font-weight: 600;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 44px;
   margin: 0;
   @media (max-width: 1080px) {
     font-size: 38px;
-    line-height: 46px;
+    line-height: 42px;
   }
   @media (max-width: 768px) {
     font-size: 34px;
@@ -148,6 +150,7 @@ export const ProjectHeading = styled.h3`
 `;
 
 export const Description = styled.p`
+  margin: 16px 0;
   color: var(--primary-black);
   font-weight: 400;
   font-size: 24px;
@@ -163,13 +166,13 @@ export const Description = styled.p`
 export const Date = styled.p`
   font-weight: 500;
   font-size: 16px;
-  line-height: 21px;
+  margin: 0 0 16px;
 `;
 
 export const TagsContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
 `;
 
 export const GreenTag = styled.div`

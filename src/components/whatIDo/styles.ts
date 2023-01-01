@@ -46,7 +46,7 @@ export const Heading = styled.h1`
 `;
 
 export const Pill = styled.div`
-  background-color: #f7ddca;
+  background-color: #fbeccc;
   border-radius: 100px;
   display: flex;
   justify-content: center;
@@ -56,11 +56,6 @@ export const Pill = styled.div`
   margin: 6px 5px;
   padding: 0 clamp(15px, 5%, 15px);
   transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.02);
-    transition: var(--transition);
-    background-color: #eea367;
-  }
   @media (max-width: 600px) {
     max-width: 250px;
   }
@@ -90,15 +85,10 @@ export const PillText = styled.h3`
 export const Ellipse = styled.div`
   width: fit-content;
   height: fit-content;
-  background-color: #d5ddf3;
+  background-color: #ede8ff;
   border-radius: 100px;
   margin: 4px 8px;
   transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.02);
-    transition: var(--transition);
-    background-color: #9ab3f9;
-  }
 `;
 
 export const Emoji = styled.div`

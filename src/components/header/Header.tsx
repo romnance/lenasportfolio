@@ -10,26 +10,26 @@ export default function HeaderComponent (_props: IHeaderProps) {
   const [hideHeader, setHideHeader] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
-  const shadowStyle = showShadow ? '0 9px 9px -9px rgba(0, 0, 0, 0.13)' : '';
-  const hiddenStyle = hideHeader ? 'translateY(-110%)' : 'translateY(0)';
+  const shadowStyle = showShadow ? "0 9px 9px -9px rgba(202, 191, 237, 0.3)" : "";
+  const hiddenStyle = hideHeader ? "translateY(-110%)" : "translateY(0)";
 
   const MINIMUM_SCROLL = 80;
   const TIMEOUT_DELAY = 400;
 
   useEffect(() => {
-    setHideHeader(false)
-  },[])
+    setHideHeader(false);
+  }, []);
 
-  useDocumentScrollThrottled(callbackData => {
+  useDocumentScrollThrottled((callbackData) => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
     setShowShadow(currentScrollTop > 2);
 
-    setTimeout(() => {
-      setHideHeader(isScrolledDown && isMinimumScrolled);
-    }, TIMEOUT_DELAY);
+    // setTimeout(() => {
+    //   setHideHeader(isScrolledDown && isMinimumScrolled);
+    // }, TIMEOUT_DELAY);
   });
 
   const menuOpener = () => {

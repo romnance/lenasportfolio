@@ -3,16 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: fit-content;
-  background-color: #f3f1fa;
+  background-color: #ede8ff;
   border-radius: 25px;
   box-sizing: border-box;
-  margin: 80px 0;
+  margin: 200px 0 80px;
   padding: 57px 60px 24px;
   @media (max-width: 1000px) {
     padding: 50px 30px 24px;
+    margin: 160px 0 60px;
   }
   @media (max-width: 600px) {
     padding: 42px 20px 24px;
+    margin: 60px 0 40px;
   }
 `;
 
@@ -40,7 +42,7 @@ export const Emoji = styled.div`
   text-align: center;
   margin: 12px 0;
   padding-bottom: 12px;
-  background-color: #fbeccc;
+  background-color: #ffffff;
   border-radius: 50%;
   @media (max-width: 1080px) {
     height: 120px;
@@ -72,12 +74,12 @@ export const Img = styled.img`
 export const P = styled.p`
   max-width: 470px;
   font-size: 24px;
-  line-height: 31.75px;
-  font-weight: 500;
+  line-height: 28px;
+  font-weight: 400;
   @media (max-width: 1080px) {
     max-width: 400px;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 26px;
   }
   @media (max-width: 768px) {
     max-width: 250px;
@@ -102,12 +104,15 @@ export const Row = styled.div`
   width: fit-content;
   margin-bottom: 80px;
   padding: 12px 0;
+  a {
+    font-weight: 500;
+  }
 `;
 
 export const Link = styled.a`
   font-size: 24px;
   line-height: 31.75px;
-  font-weight: 500;
+  font-weight: 400;
   margin-right: 24px;
   text-decoration: none;
   color: var(--primary-black);
