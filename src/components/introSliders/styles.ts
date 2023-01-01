@@ -26,8 +26,8 @@ export const Section = styled.section<Color>`
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: clamp(85vw, 80vw, 1920px);
-  padding: 0 12px;
+  width: clamp(83vw, 80vw, 1910px);
+  padding: 0 24px;
   background-color: ${(props) => props.color};
   border-radius: 48px;
   box-shadow: 0 4px 6px rgba(0, 0, 1, 0.08);
@@ -42,7 +42,7 @@ export const Section = styled.section<Color>`
     z-index: 2;
     position: relative;
     top: -11%;
-    width: clamp(85vw, 80vw, 1920px);
+    width: clamp(83vw, 80vw, 1920px);
     transform: rotate(355deg);
     &:hover {
       top: -13%;
