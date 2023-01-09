@@ -37,7 +37,7 @@ export const Section = styled.section<Color>`
     z-index: 3;
     position: absolute;
     transition: transform 0.6s ease;
-    // transform-origin: left 2px;
+    transform-origin: left 2px;
   }
   &:nth-child(2) {
     z-index: 2;
@@ -51,7 +51,7 @@ export const Section = styled.section<Color>`
     }
     @media (max-width: 768px) {
       top: -20%;
-      width: 90vw;
+      width: 85vw;
       &:hover {
         top: -21%;
         transition: 0.4s ease-out;

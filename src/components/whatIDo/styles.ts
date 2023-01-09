@@ -8,6 +8,7 @@ export const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 100px;
+  position: relative;
 `;
 
 export const RowDesktop = styled.div`
@@ -21,9 +22,9 @@ export const RowDesktop = styled.div`
 export const RowMobile = styled.div`
   @media (max-width: 768px) {
     display: flex;
+    flex-direction: row;
   }
   display: none;
-  flex-direction: row;
 `;
 
 export const Heading = styled.h1`
@@ -79,6 +80,11 @@ export const PillText = styled.h3`
     font-size:  15px;
     line-height: 15px;
     margin: 12px 6px;
+  }
+  @media (max-width: 380px) {
+    font-size:  12px;
+    line-height: 12px;
+    margin: 10px 6px;
   }
 `;
 
