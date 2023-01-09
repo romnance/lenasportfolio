@@ -30,6 +30,8 @@ const content = [
       "Diploma project",
       "Group project",
     ],
+    projectLink:
+      "https://www.behance.net/gallery/138460175/Custom-Support-app-for-Motorica",
   },
   {
     heading: "Branding, UX/UI design for oral care brand Toothe",
@@ -42,6 +44,7 @@ const content = [
       "Responsive design",
       "Internship project",
     ],
+    projectLink: "https://www.behance.net/gallery/127438539/Oral-care-brand-Toothe",
   },
   {
     heading: "Bonus program concept for OTP Bank",
@@ -49,6 +52,8 @@ const content = [
       "App concept for the bank loyalty program to increase retention rate and user satisfaction",
     date: "2021",
     tags: ["Fintech", "Bank app", "Categories", "IOS", "App design", "Study project"],
+    projectLink:
+      "https://www.behance.net/gallery/127353891/Concept-for-bonus-program-app-from-OTP-Bank",
   },
 ];
 
@@ -111,6 +116,7 @@ const Projects: FC<Props> = () => {
             date={content[1].date}
             tags={content[1].tags}
             imgLink={Second}
+            projectLink={content[1].projectLink}
             purpleTag={false}
           />
         </div>
@@ -123,6 +129,7 @@ const Projects: FC<Props> = () => {
             date={content[2].date}
             tags={content[2].tags}
             imgLink={Third}
+            projectLink={content[2].projectLink}
             purpleTag={false}
           />
         </div>
@@ -134,6 +141,7 @@ const Projects: FC<Props> = () => {
             description={content[3].description}
             date={content[3].date}
             tags={content[3].tags}
+            projectLink={content[3].projectLink}
             imgLink={Fourth}
             purpleTag={false}
           />

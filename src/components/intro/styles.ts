@@ -26,6 +26,8 @@ export const Text = styled.h1`
   font-size: var(--fz-heading);
   font-weight: 800;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 40%;
   left: 50%;
   text-align: center;
