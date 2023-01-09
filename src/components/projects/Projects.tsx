@@ -1,11 +1,11 @@
-import React, { FC, useEffect, useState } from "react";
-import useDocumentScrollThrottled from "../../helpers/documentScroll";
+import React, { FC } from "react";
 import { Container, Heading, PurpleTag, ControlPillDesktop } from "./styles";
 import Project from "./Project";
 import First from "../../images/Olivia.png";
 import Second from "../../images/Motorica.png";
 import Third from "../../images/Toothie.png";
 import Fourth from "../../images/OTP.png";
+import { motion, Variants } from "framer-motion";
 
 type Props = {};
 
@@ -57,96 +57,116 @@ const content = [
   },
 ];
 
+const cardVariants: Variants = {
+  offscreen: {
+    y: 250,
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+      duration: 0.8,
+    },
+  },
+};
+
 const Projects: FC<Props> = () => {
-  const [showFirst, setShowFirst] = useState(false);
-  const [showSecond, setShowSecond] = useState(false);
-  const [showThird, setShowThird] = useState(false);
-  const [showFourth, setShowFourth] = useState(false);
-
-  const MINIMUM_SCROLL = 1200;
-  const MINIMUM_SCROLL_2 = 1900;
-  const MINIMUM_SCROLL_3 = 2400;
-  const MINIMUM_SCROLL_4 = 3400;
-  const TIMEOUT_DELAY = 300;
-
-  useEffect(() => {
-    setShowFirst(true);
-  }, []);
-
-  useDocumentScrollThrottled((callbackData) => {
-    const { currentScrollTop } = callbackData;
-    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
-    const isMinimumScrolled2 = currentScrollTop > MINIMUM_SCROLL_2;
-    const isMinimumScrolled3 = currentScrollTop > MINIMUM_SCROLL_3;
-    const isMinimumScrolled4 = currentScrollTop > MINIMUM_SCROLL_4;
-    setTimeout(() => {
-      // setShowFirst(isMinimumScrolled);
-      if (isMinimumScrolled) setShowFirst(true);
-      if (isMinimumScrolled2) setShowSecond(true);
-      if (isMinimumScrolled3) setShowThird(true);
-      if (isMinimumScrolled4) setShowFourth(true);
-    }, TIMEOUT_DELAY);
-  });
-
   return (
     <>
-      <div className="Common-container">
-        <Heading>Projects</Heading>
-      </div>
-      <Container active={showFirst} id="projects">
-        <div className="Common-container">
-          <ControlPillDesktop>
-            <PurpleTag>Coming soon</PurpleTag>
-          </ControlPillDesktop>
-          <Project
-            heading={content[0].heading}
-            description={content[0].description}
-            date={content[0].date}
-            tags={content[0].tags}
-            imgLink={First}
-            purpleTag={true}
-          />
-        </div>
-      </Container>
-      <Container active={showSecond}>
-        <div className="Common-container">
-          <Project
-            heading={content[1].heading}
-            description={content[1].description}
-            date={content[1].date}
-            tags={content[1].tags}
-            imgLink={Second}
-            projectLink={content[1].projectLink}
-            purpleTag={false}
-          />
-        </div>
-      </Container>
-      <Container active={showThird}>
-        <div className="Common-container">
-          <Project
-            heading={content[2].heading}
-            description={content[2].description}
-            date={content[2].date}
-            tags={content[2].tags}
-            imgLink={Third}
-            projectLink={content[2].projectLink}
-            purpleTag={false}
-          />
-        </div>
-      </Container>
-      <Container active={showFourth}>
-        <div className="Common-container">
-          <Project
-            heading={content[3].heading}
-            description={content[3].description}
-            date={content[3].date}
-            tags={content[3].tags}
-            projectLink={content[3].projectLink}
-            imgLink={Fourth}
-            purpleTag={false}
-          />
-        </div>
-      </Container>
+      <motion.div
+        className="card-container"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+      >
+        <motion.div variants={cardVariants}>
+          <div className="Common-container">
+            <Heading>Projects</Heading>
+          </div>
+          <Container id="projects">
+            <div className="Common-container">
+              <ControlPillDesktop>
+                <PurpleTag>Coming soon</PurpleTag>
+              </ControlPillDesktop>
+              <Project
+                heading={content[0].heading}
+                description={content[0].description}
+                date={content[0].date}
+                tags={content[0].tags}
+                imgLink={First}
+                purpleTag={true}
+              />
+            </div>
+          </Container>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="card-container"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+      >
+        <motion.div variants={cardVariants}>
+          <Container>
+            <div className="Common-container">
+              <Project
+                heading={content[1].heading}
+                description={content[1].description}
+                date={content[1].date}
+                tags={content[1].tags}
+                imgLink={Second}
+                projectLink={content[1].projectLink}
+                purpleTag={false}
+              />
+            </div>
+          </Container>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="card-container"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+      >
+        <motion.div variants={cardVariants}>
+          <Container>
+            <div className="Common-container">
+              <Project
+                heading={content[2].heading}
+                description={content[2].description}
+                date={content[2].date}
+                tags={content[2].tags}
+                imgLink={Third}
+                projectLink={content[2].projectLink}
+                purpleTag={false}
+              />
+            </div>
+          </Container>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="card-container"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+      >
+        <motion.div variants={cardVariants}>
+          <Container>
+            <div className="Common-container">
+              <Project
+                heading={content[3].heading}
+                description={content[3].description}
+                date={content[3].date}
+                tags={content[3].tags}
+                projectLink={content[3].projectLink}
+                imgLink={Fourth}
+                purpleTag={false}
+              />
+            </div>
+          </Container>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

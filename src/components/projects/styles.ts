@@ -4,7 +4,7 @@ interface Active {
   active: boolean;
 }
 
-export const Container = styled.div<Active>`
+export const Container = styled.div`
   width: 100%;
   margin-top: 60px;
   margin-bottom: 0px;
@@ -15,8 +15,6 @@ export const Container = styled.div<Active>`
   background-color: #fefeff;
   box-shadow: 0 -20px 20px -12px rgba(202, 191, 237, 0.3);
   position: relative;
-  transform: ${(props) => (props.active ? "translateY(0)" : "translateY(150px)")};
-  opacity: ${(props) => (props.active ? "1" : "0")};
   transition: 0.5s all ease;
   @media (max-width: 1000px) {
     padding: 100px 0 0;

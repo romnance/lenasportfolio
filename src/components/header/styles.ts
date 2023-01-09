@@ -32,7 +32,7 @@ export const Header = styled.header<Scroll>`
   pointer-events: auto !important;
   user-select: auto !important;
   transform: ${(props) => props.hiddenStyle};
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
   @media (max-width: 1080px) {
     padding: 0px 40px;
   }

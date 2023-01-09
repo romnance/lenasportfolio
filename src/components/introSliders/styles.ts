@@ -36,7 +36,8 @@ export const Section = styled.section<Color>`
     top: 180px;
     z-index: 3;
     position: absolute;
-    transform-origin: left 2px;
+    transition: transform 0.6s ease;
+    // transform-origin: left 2px;
   }
   &:nth-child(2) {
     z-index: 2;
@@ -46,7 +47,7 @@ export const Section = styled.section<Color>`
     transform: rotate(355deg);
     &:hover {
       top: -13%;
-      transition: 0.4s ease-out;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
     @media (max-width: 768px) {
       top: -20%;

@@ -26,10 +26,6 @@ export default function HeaderComponent (_props: IHeaderProps) {
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
     setShowShadow(currentScrollTop > 2);
-
-    // setTimeout(() => {
-    //   setHideHeader(isScrolledDown && isMinimumScrolled);
-    // }, TIMEOUT_DELAY);
   });
 
   const menuOpener = () => {
