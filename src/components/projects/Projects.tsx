@@ -57,9 +57,11 @@ const content = [
   },
 ];
 
+const yHeight = window.innerWidth >= 768 ? 250 : 100;
+
 const cardVariants: Variants = {
   offscreen: {
-    y: 250,
+    y: yHeight,
   },
   onscreen: {
     y: 0,
@@ -78,7 +80,7 @@ const Projects: FC<Props> = () => {
         className="card-container"
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.6 }}
       >
         <motion.div variants={cardVariants}>
           <div className="Common-container">
@@ -105,7 +107,7 @@ const Projects: FC<Props> = () => {
         className="card-container"
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.6 }}
       >
         <motion.div variants={cardVariants}>
           <Container>
@@ -127,7 +129,7 @@ const Projects: FC<Props> = () => {
         className="card-container"
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.6 }}
       >
         <motion.div variants={cardVariants}>
           <Container>
@@ -149,7 +151,7 @@ const Projects: FC<Props> = () => {
         className="card-container"
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.6 }}
       >
         <motion.div variants={cardVariants}>
           <Container>
