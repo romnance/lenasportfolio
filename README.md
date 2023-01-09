@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 CSS was organized with [Styled Components](https://styled-components.com/) 
@@ -7,8 +5,9 @@ CSS was organized with [Styled Components](https://styled-components.com/)
 Some animations handled by [Framer-motion](https://www.framer.com/docs/examples/)
 
 File structure: 
-    App.tsx - root component
-    Files Related to the Same Component located in the same Folder
+    App.tsx - root component.
+    Files Related to the Same Component located in the same Folder. 
+ 
 
 
 ### `npm start`
