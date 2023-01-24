@@ -65,8 +65,6 @@ const GlobalStyles = createGlobalStyle`
   }
   .Common-container {
     padding: 0px 112px;
-    width: 100%;
-    box-sizing: border-box;
     @media (max-width: 1080px){
     padding: 0px 38px;
   }
