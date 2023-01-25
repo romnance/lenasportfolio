@@ -1,128 +1,130 @@
 .swiper {
-    width: 100%;
-    height: 100%;
-    padding: 80px 100px 10px;
-    margin: 100px auto;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 80px 100px 10px;
+  margin: 100px auto;
+  box-sizing: border-box;
 }
 
-
 .swiper-slide {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    max-height: 700px;
-    width: clamp(75vw, 83vw, 1800px);
-    background-color: #EDE8FF;
-    border-radius: 48px;
-    box-shadow: 0 4px 6px rgba(0, 0, 1, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  max-height: 700px;
+  width: clamp(75vw, 83vw, 1800px);
+  background-color: #ede8ff;
+  border-radius: 48px;
+  box-shadow: 0 4px 6px rgba(0, 0, 1, 0.08);
 }
 
 .swiper-slide:nth-child(1n) {
-    background-color: #EDE8FF;
+  background-color: #ede8ff;
 }
 
 .swiper-slide:nth-child(2n) {
-    background-color: #EDE8FF;
-    ;
+  background-color: #ede8ff;
 }
 
 .swiper-slide:nth-child(3n) {
-    background-color: #EDE8FF;
+  background-color: #ede8ff;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 30px;
+  bottom: 30px;
 }
 
 .swiper-pagination-bullet {
-    width: 24px;
-    height: 14px;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 13px;
-    opacity: 1;
-    border: 1px solid #1b1b1b;
+  width: 24px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 13px;
+  opacity: 1;
+  border: 1px solid #1b1b1b;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #1b1b1b;
+  background-color: #1b1b1b;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: fit-content;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  box-sizing: border-box;
 }
 
-
 .emoji {
-    height: 160px;
-    width: 160px;
-    display: inline-block;
-    text-align: center;
-    overflow: hidden;
-    text-align: center;
-    margin-bottom: 32px;
-    background: #fefeff;
-    border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 32px;
+  background: #fefeff;
+  border-radius: 50%;
 }
 
 .emoji img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
 }
 
 .title {
-    font-family: "Red Hat Display";
-    font-style: normal;
-    font-weight: 600;
-    font-size: var(--fz-heading);
-    margin: 0px;
-    line-height: calc(var(--fz-heading) * 1.1);
-    text-align: center;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fz-heading);
+  margin: 0px;
+  line-height: calc(var(--fz-heading) * 1.1);
+  text-align: center;
 }
-
 
 @media (max-width: 1080px) {
-    .emoji {
-        height: 130px;
-        width: 130px;
-    }
+  .emoji {
+    height: 130px;
+    width: 130px;
+  }
 
-    .title {
-        font-size: 36px;
-        line-height: calc(36px * 1.1);
-    }
+  .title {
+    font-size: 36px;
+    line-height: calc(36px * 1.1);
+  }
 
-    .swiper-slide {
-        height: 75vh;
-    }
-.swiper {
+  .swiper-slide {
+    height: clamp(300px, 70vh, 700px);
+  }
+  .swiper {
     padding: 80px 75px 10px;
     margin: 100px auto;
-}
+  }
 }
 
 @media (max-width: 768px) {
-    .emoji {
-        height: 100px;
-        width: 100px;
-    }
+  .emoji {
+    height: 100px;
+    width: 100px;
+  }
 
-    .title {
-        font-size: 24px;
-        line-height: calc(24px * 1.1);
-    }
+  .title {
+    font-size: 23px;
+    line-height: calc(23px * 1.1);
+  }
 
-    .swiper-slide {
-        height: 60vh;
-    }
+  .swiper {
+    padding: 40px 42px 10px;
+    margin: 100px auto;
+  }
+  .swiper-slide {
+    height: 60vh;
+    max-height: 700px;
+    width: clamp(270px, 83vw, 500px);
+  }
 }

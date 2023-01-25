@@ -27,7 +27,7 @@ function App() {
       <Intro />
       <AnimatedTransitionVertical isVisible={showSliders}>
         <>
-          <div className="Common-container">
+          <div className="Slider-container">
             <SliderCarousel />
           </div>
           <div className="Common-container">
