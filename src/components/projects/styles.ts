@@ -124,11 +124,65 @@ export const Right = styled.div`
   }
 `;
 
+export const Button = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  background-color: #fefeff;
+  border-style: none;
+  border-radius: 8px;
+  padding: 18px 36px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  @media (max-width: 1080px) {
+    padding: 16px 34px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  @media (max-width: 768px) {
+    padding: 14px 28px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+`;
+
+export const OverlayContainer = styled.div`
+  position: relative;
+  border-radius: 19px;
+  overflow: hidden;
+  transition: all 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+  }
+  &:hover:before {
+    background: rgba(87, 87, 87, 0.4);
+  }
+  &:hover ${Button} {
+    opacity: 1;
+    cursor: pointer;
+  }
+`;
+
 export const Img = styled.img`
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 1;
+  border-radius: 19px;
 `;
 
 export const ProjectHeading = styled.h3`
