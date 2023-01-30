@@ -3,6 +3,8 @@ import {
   ProjectContainer,
   Left,
   Right,
+  OverlayContainer,
+  Button,
   Img,
   ProjectHeading,
   Description,
@@ -46,7 +48,10 @@ const Project: FC<Props> = ({
       </Left>
       <Right>
         <a href={projectLink} target="_blank">
-          <Img src={imgLink} />
+          <OverlayContainer>
+            <Img src={imgLink} />
+            <Button>{!projectLink ? "Coming soon" : "View project"}</Button>
+          </OverlayContainer>
         </a>
         {purpleTag && (
           <ControlPillMobile>

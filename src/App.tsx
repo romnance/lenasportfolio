@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import HeaderComponent from './components/header/Header';
-import Intro from './components/intro/Intro';
-import IntroSliders from './components/introSliders/IntroSliders';
+import Intro from "./components/intro/Intro";
+import SliderCarousel from "./components/introSliders2/SliderCarousel";
 import WhatIDo from "./components/whatIDo/WhatIDo";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
@@ -26,8 +26,8 @@ function App() {
       <Intro />
       <AnimatedTransitionVertical isVisible={showSliders}>
         <>
-          <div className="Common-container">
-            <IntroSliders />
+          <div className="Slider-container">
+            <SliderCarousel />
           </div>
           <div className="Common-container">
             <WhatIDo />
