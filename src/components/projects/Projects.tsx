@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container, Heading, PurpleTag, ControlPillDesktop } from "./styles";
+import { Container, Heading } from "./styles";
 import Project from "./Project";
 import First from "../../images/Olivia.png";
 import Second from "../../images/Motorica.png";
@@ -16,6 +16,8 @@ const content = [
       "Re-designing and enhancing the app to increase downloads and improve retention",
     date: "2021-present",
     tags: ["Female health", "Health-tech", "IOS", "App design", "Apple store"],
+    projectLink:
+      "https://www.behance.net/gallery/165061051/Olivia-Appyour-menopause-support?fbclid=IwAR2eglmRAYTMdDSWZYK8jdEYvzFOUt5KVXFtwwubYxS2e3SQWkBGJO2Va6k",
   },
   {
     heading: "Customer support app for Motorica",
@@ -88,16 +90,14 @@ const Projects: FC<Props> = () => {
           </div>
           <Container id="projects">
             <div className="Common-container">
-              <ControlPillDesktop>
-                <PurpleTag>Coming soon</PurpleTag>
-              </ControlPillDesktop>
               <Project
                 heading={content[0].heading}
                 description={content[0].description}
                 date={content[0].date}
                 tags={content[0].tags}
                 imgLink={First}
-                purpleTag={true}
+                projectLink={content[0].projectLink}
+                purpleTag={false}
               />
             </div>
           </Container>
