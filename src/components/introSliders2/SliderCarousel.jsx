@@ -26,7 +26,6 @@ function SliderCarousel() {
         modules={[Pagination, EffectCards]}
         className="mySwiper"
         centeredSlides={true}
-        // slidesPerView={"auto"}
       >
         <SwiperSlide>
           <Slider
