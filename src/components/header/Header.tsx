@@ -1,16 +1,35 @@
-import {useState, useEffect} from "react";
-import useDocumentScrollThrottled from '../../helpers/documentScroll';
-import {Header,Nav, Logo, Link, Links, Ol, Li, A, Menu, Button, HamBox, HamBoxInner, Sidebar, AsideNav, AsideOl, AsideLi, AsideA} from './styles';
+import { useEffect, useState } from "react";
+import useDocumentScrollThrottled from "../../helpers/documentScroll";
+import {
+  A,
+  AsideA,
+  AsideLi,
+  AsideNav,
+  AsideOl,
+  Button,
+  HamBox,
+  HamBoxInner,
+  Header,
+  Li,
+  Link,
+  Links,
+  Logo,
+  Menu,
+  Nav,
+  Ol,
+  Sidebar,
+} from "./styles";
 
-export interface IHeaderProps {
-}
+export interface IHeaderProps {}
 
-export default function HeaderComponent (_props: IHeaderProps) {
+export default function HeaderComponent(_props: IHeaderProps) {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [hideHeader, setHideHeader] = useState(true);
   const [showShadow, setShowShadow] = useState(false);
 
-  const shadowStyle = showShadow ? "0 9px 9px -9px rgba(202, 191, 237, 0.3)" : "";
+  const shadowStyle = showShadow
+    ? "0 9px 9px -9px rgba(202, 191, 237, 0.3)"
+    : "";
   const hiddenStyle = hideHeader ? "translateY(-110%)" : "translateY(0)";
 
   const MINIMUM_SCROLL = 80;
@@ -30,7 +49,7 @@ export default function HeaderComponent (_props: IHeaderProps) {
 
   const menuOpener = () => {
     setOpenMenu(!openMenu);
-  }
+  };
 
   return (
     <Header shadowStyle={shadowStyle} hiddenStyle={hiddenStyle}>
@@ -41,7 +60,7 @@ export default function HeaderComponent (_props: IHeaderProps) {
         <Links>
           <Ol>
             <Li transition={"0ms"}>
-              <A href="#what-i-do">What I Do</A>
+              <A href="#my-process">My Process</A>
             </Li>
             <Li transition={"100ms"}>
               <A href="#projects">Projects</A>
@@ -55,15 +74,17 @@ export default function HeaderComponent (_props: IHeaderProps) {
           <div>
             <Button onClick={menuOpener}>
               <HamBox>
-                <HamBoxInner visible={openMenu ? "visible" : "hidden"}></HamBoxInner>
+                <HamBoxInner
+                  visible={openMenu ? "visible" : "hidden"}
+                ></HamBoxInner>
               </HamBox>
             </Button>
             <Sidebar visible={openMenu ? "visible" : "hidden"}>
               <AsideNav visible={openMenu ? "visible" : "hidden"}>
                 <AsideOl>
                   <AsideLi>
-                    <AsideA href="#what-i-do" onClick={menuOpener}>
-                      What I Do
+                    <AsideA href="#my-process" onClick={menuOpener}>
+                      My Process
                     </AsideA>
                   </AsideLi>
                   <AsideLi>

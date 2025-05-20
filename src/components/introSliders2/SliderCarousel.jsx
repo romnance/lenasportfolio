@@ -1,14 +1,13 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import Slider from "./Slider";
-import First from "../../images/Group1.png";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Second from "../../images/2.png";
 import Third from "../../images/3.png";
+import First from "../../images/Group1.png";
+import Slider from "./Slider";
 import "./styles.css";
 
-import { Pagination, EffectCards } from "swiper";
+import { EffectCards, Pagination } from "swiper";
 
 function SliderCarousel() {
   const pagination = {
@@ -30,22 +29,22 @@ function SliderCarousel() {
         <SwiperSlide>
           <Slider
             imgLink={First}
-            paragraph1="Hi, I'm Lena,"
-            paragraph2="UX/UI Designer"
+            paragraph1="Specialising in B2C"
+            paragraph2="mobile app experiences"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Slider
             imgLink={Second}
-            paragraph1="1+ years of experience"
-            paragraph2="in B2C product"
+            paragraph1="Driven by iteration"
+            paragraph2="and user insight"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Slider
             imgLink={Third}
-            paragraph1="Multitasking and love"
-            paragraph2="to explore new things"
+            paragraph1="Curious mind with a thing for"
+            paragraph2="clarity and complexity"
           />
         </SwiperSlide>
       </Swiper>

@@ -1,16 +1,16 @@
-import React, { FC } from "react";
-import { Container, RowDesktop, RowMobile, Heading } from "./styles";
-import Pill from "./Pill";
-import RoundPill from "./RoundPill";
+import { FC } from "react";
 import First from "../../images/Clouds.png";
 import Second from "../../images/Idea.png";
+import Pill from "./Pill";
+import RoundPill from "./RoundPill";
+import { Container, Heading, RowDesktop, RowMobile } from "./styles";
 
 type Props = {};
 
 const WhatIDo: FC<Props> = () => {
   return (
-    <Container id="what-i-do">
-      <Heading>What&nbsp;I&nbsp;Do</Heading>
+    <Container id="my-process">
+      <Heading>My&nbsp;Process</Heading>
       <RowDesktop>
         <Pill text="User&nbsp;Research" />
         <RoundPill imgLink={First} />

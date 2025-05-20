@@ -1,10 +1,15 @@
-import React, { FC, useState } from 'react'; 
-import {Slider, CurrentSliderContainer, CurrentSlider, InactiveSlider} from "./styles";
-import SliderCard from "./SliderCard";
-import First from "../../images/Group1.png";
+import { FC, useState } from "react";
 import Second from "../../images/2.png";
 import Third from "../../images/3.png";
+import First from "../../images/Group1.png";
 import AnimatedTransition from "../AnimationTransition";
+import SliderCard from "./SliderCard";
+import {
+  CurrentSlider,
+  CurrentSliderContainer,
+  InactiveSlider,
+  Slider,
+} from "./styles";
 
 type Props = {};
 
