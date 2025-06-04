@@ -1,18 +1,19 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import {
-  ProjectContainer,
-  Left,
-  Right,
-  OverlayContainer,
   Button,
-  Img,
-  ProjectHeading,
-  Description,
-  Date,
-  TagsContainer,
-  PurpleTag,
+  ComingSoonTag,
   ControlPillMobile,
+  Date,
+  Description,
   GreenTag,
+  Img,
+  Left,
+  OverlayContainer,
+  ProjectContainer,
+  ProjectHeading,
+  PurpleTag,
+  Right,
+  TagsContainer,
 } from "./styles";
 
 type Props = {
@@ -37,6 +38,7 @@ const Project: FC<Props> = ({
   return (
     <ProjectContainer>
       <Left>
+        {!projectLink && <ComingSoonTag>Coming Soon</ComingSoonTag>}
         <ProjectHeading>{heading}</ProjectHeading>
         <Description>{description}</Description>
         <Date>{date}</Date>
@@ -47,7 +49,7 @@ const Project: FC<Props> = ({
         </TagsContainer>
       </Left>
       <Right>
-        <a href={projectLink} target="_blank">
+        <a href={projectLink} target="_blank" rel="noreferrer">
           <OverlayContainer>
             <Img src={imgLink} />
             <Button>{!projectLink ? "Coming soon" : "View project"}</Button>

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #5A5A5A;
     --light-purple: #EAD6EE;
     --light-green: #D4F1DB;
+    --light-purple: #AF9CEB;
     --purple: #B4A4E6;
     --navy-shadow: rgba(2,12,27,0.2);
     --white: #e6f1ff;

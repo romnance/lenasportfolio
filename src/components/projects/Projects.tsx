@@ -1,7 +1,8 @@
 import { motion, Variants } from "framer-motion";
 import { FC } from "react";
-import Second from "../../images/Motorica.png";
-import First from "../../images/Olivia.png";
+import Third from "../../images/Kreddy.png";
+import Second from "../../images/Motorica_v3.png";
+import First from "../../images/Olivia_v2.png";
 import Project from "./Project";
 import { Container } from "./styles";
 
@@ -11,7 +12,7 @@ const content = [
   {
     heading: "Kreddy – smart personal finance in your pocket",
     description:
-      "1M+ downloads. A PFM app built for credit score insights, loan tracking, and AI-powered predictions",
+      "Redesigned and optimised the app to enhance usability and engagement, supporting its growth past 1M+ downloads.",
     date: "2023 - present",
     tags: [
       "Fintech",
@@ -21,9 +22,7 @@ const content = [
       "Apple Store",
       "Google Play",
     ],
-    projectLink:
-      "https://www.behance.net/gallery/165061051/Olivia-Appyour-menopause-support?fbclid=IwAR2eglmRAYTMdDSWZYK8jdEYvzFOUt5KVXFtwwubYxS2e3SQWkBGJO2Va6k",
-    image: First,
+    image: Third,
   },
   {
     heading: "Olivia-your menopause support",

@@ -227,6 +227,28 @@ export const TagsContainer = styled.div`
   gap: 8px;
 `;
 
+export const ComingSoonTag = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 6px 28px;
+  font-weight: bold;
+  color: #fefeff;
+  margin: 0px 0px 16px;
+  background-color: var(--light-purple);
+  @media (max-width: 1080px) {
+    font-size: 16px;
+    padding: 6px 28px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 6px 28px;
+  }
+`;
+
 export const GreenTag = styled.div`
   display: flex;
   flex-direction: row;
