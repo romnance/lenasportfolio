@@ -22,6 +22,7 @@ const content = [
       "Apple Store",
       "Google Play",
     ],
+    projectLink: "https://www.behance.net/gallery/238820013/Kreddy-App-Interest-Rate-Monitoring-feature",
     image: Third,
   },
   {
