@@ -29,10 +29,12 @@ function App() {
           <div className="Slider-container">
             <SliderCarousel />
           </div>
+
+          <Projects />
           <div className="Common-container">
             <WhatIDo />
           </div>
-          <Projects />
+
           <div className="Common-container">
             <Footer />
           </div>

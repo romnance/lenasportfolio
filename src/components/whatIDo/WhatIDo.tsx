@@ -10,7 +10,7 @@ type Props = {};
 const WhatIDo: FC<Props> = () => {
   return (
     <Container id="my-process">
-      <Heading>My&nbsp;Process</Heading>
+      <Heading>My Process</Heading>
       <RowDesktop>
         <Pill text="User&nbsp;Research" />
         <RoundPill imgLink={First} />

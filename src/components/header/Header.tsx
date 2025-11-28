@@ -60,10 +60,10 @@ export default function HeaderComponent(_props: IHeaderProps) {
         <Links>
           <Ol>
             <Li transition={"0ms"}>
-              <A href="#my-process">My Process</A>
-            </Li>
-            <Li transition={"100ms"}>
               <A href="#projects">Projects</A>
+            </Li>
+          <Li transition={"100ms"}>
+              <A href="#my-process">My Process</A>
             </Li>
             <Li transition={"200ms"}>
               <A href="#get-in-touch">Get in touch</A>
@@ -83,13 +83,13 @@ export default function HeaderComponent(_props: IHeaderProps) {
               <AsideNav visible={openMenu ? "visible" : "hidden"}>
                 <AsideOl>
                   <AsideLi>
-                    <AsideA href="#my-process" onClick={menuOpener}>
-                      My Process
+                    <AsideA href="#projects" onClick={menuOpener}>
+                      Projects
                     </AsideA>
                   </AsideLi>
                   <AsideLi>
-                    <AsideA href="#projects" onClick={menuOpener}>
-                      Projects
+                    <AsideA href="#my-process" onClick={menuOpener}>
+                      My Process
                     </AsideA>
                   </AsideLi>
                   <AsideLi>
